@@ -1,0 +1,14 @@
+http://www.tecmint.com/ssh-passwordless-login-using-ssh-keygen-in-5-easy-steps/
+
+sudo apt-get install ssh
+
+ssh-keygen -t rsa -P ""
+
+ssh-copy-id user@host
+
+ssh-add
+
+sudo chmod -R 700 /home/{user}/.ssh
+sudo chmod -R 640 /home/{user}/.ssh/authorized_keys
+
+
