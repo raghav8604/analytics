@@ -1,0 +1,13 @@
+1# When you get error,
+OLE DB error: OLE DB or ODBC error: SQL Server blocked access to STATEMENT 'OpenRowset/OpenDatasource' 
+of component 'Ad Hoc Distributed Queries' because this component is turned off as part of the security configuration for this server. 
+A system administrator can enable the use of 'Ad Hoc Distributed Queries' by using sp_configure. For more information about enabling 
+'Ad Hoc Distributed Queries', search for 'Ad Hoc Distributed Queries' in SQL Server Books Online.; 42000.
+
+Run below script in SSMS
+EXEC sp_configure 'show advanced options', 1
+RECONFIGURE
+GO
+EXEC sp_configure 'ad hoc distributed queries', 1
+RECONFIGURE
+GO
